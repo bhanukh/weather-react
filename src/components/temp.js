@@ -8,7 +8,7 @@ const Temp = () => {
 
   const getWeatherInfo = async () => {
     try {
-      let url = `https://api.openweathermap.org/data/2.5/weather?q=sirsa&units=metric&appid=2c89efee614eee208f0511dd78428f79`;
+      let url = `https://api.openweathermap.org/data/2.5/weather?q=${searchValue}&units=metric&appid=9ba06ff9168d2a758b79c476c6d82ce9`;
 
       let res = await fetch(url);
       let data = await res.json();
@@ -65,7 +65,6 @@ const Temp = () => {
 
       {/* our temp card  */}
       <Weathercard {...tempInfo} />
-      
     </>
   );
 };
